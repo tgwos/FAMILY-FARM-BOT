@@ -29,7 +29,8 @@ CATALOG_URL = "https://tgwos.github.io/FAMILY-FARM/"
 TELEGRAM_CONTACT_URL = "https://t.me/familyfarm01"
 TELEGRAM_GROUP_URL = "https://t.me/+Z8V2ja92liczMDVk"
 
-
+CONTATTO_SIGNAL_URL = "contatto_signal_url"
+GRUPPO_SIGNAL_URL = "gruppo_signal_url"
 
 # =========================================================
 # 🏠 MENU PRINCIPALE
@@ -55,6 +56,12 @@ def main_keyboard():
                 url=TELEGRAM_GROUP_URL
             )
         ],
+        [
+            InlineKeyboardButton(
+                "📶 Gruppo Signal",
+                url=GRUPPO_SIGNAL_URL
+            )
+        ],
     ])
 
 # =========================================================
@@ -65,20 +72,20 @@ def contacts_keyboard():
     return InlineKeyboardMarkup([
         [
             InlineKeyboardButton(
-                "✈️ Telegram",
+                "✈️ Contatto Telegram",
                 url=TELEGRAM_CONTACT_URL
             )
         ],
         [
             InlineKeyboardButton(
-                "📶 Signal",
-                url=SIGNAL_URL
+                "📶 Contatto Signal",
+                url=CONTATTO_SIGNAL_URL
             )
         ],
         [
             InlineKeyboardButton(
-                "📷 Instagram",
-                url=INSTAGRAM_URL
+                "📶 Gruppo Signal",
+                url=GRUPPO_SIGNAL_URL
             )
         ],
         [
@@ -127,10 +134,6 @@ async def buttons(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     await query.answer()
 
-    # =========================
-    # 📞 CONTATTI
-    # =========================
-
     if query.data == "contacts":
 
         try:
@@ -141,10 +144,10 @@ async def buttons(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     "Scegli dove contattarci:\n\n"
                     "✈️ Telegram\n"
                     "Supporto diretto.\n\n"
-                    "📶 Signal\n"
-                    "Canale privato di contatto.\n\n"
-                    "📷 Instagram\n"
-                    "Profilo ufficiale.\n\n"
+                    "📶 Contatto Signal\n"
+                    "Contatto privato diretto.\n\n"
+                    "📶 Gruppo Signal\n"
+                    "Accesso al gruppo ufficiale.\n\n"
                     "━━━━━━━━━━━━━━"
                 ),
                 reply_markup=contacts_keyboard()
@@ -156,14 +159,13 @@ async def buttons(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 text=(
                     "📞 CONTATTI UFFICIALI\n"
                     "━━━━━━━━━━━━━━\n\n"
-                    "Scegli dove contattarci:"
+                    "Scegli dove contattarci:\n\n"
+                    "✈️ Telegram\n"
+                    "📶 Contatto Signal\n"
+                    "📶 Gruppo Signal"
                 ),
                 reply_markup=contacts_keyboard()
             )
-
-    # =========================
-    # ⬅️ BACK
-    # =========================
 
     elif query.data == "back":
 
@@ -175,9 +177,11 @@ async def buttons(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "🛒 Catalogo\n"
             "Consulta prodotti, info e disponibilità.\n\n"
             "📞 Contatti ufficiali\n"
-            "Telegram, Signal e Instagram.\n\n"
+            "Telegram e Signal.\n\n"
             "👥 Community Telegram\n"
             "Accedi al canale ufficiale.\n\n"
+            "📶 Gruppo Signal\n"
+            "Accedi al gruppo Signal ufficiale.\n\n"
             "━━━━━━━━━━━━━━\n"
             "✅ Supporto rapido\n"
             "🔒 Solo canali ufficiali\n"
