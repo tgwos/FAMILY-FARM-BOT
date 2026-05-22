@@ -29,8 +29,8 @@ CATALOG_URL = "https://tgwos.github.io/FAMILY-FARM/"
 TELEGRAM_CONTACT_URL = "https://t.me/familyfarm01"
 TELEGRAM_GROUP_URL = "https://t.me/+Z8V2ja92liczMDVk"
 
-CONTATTO_SIGNAL_URL = "contatto_signal_url"
-GRUPPO_SIGNAL_URL = "gruppo_signal_url"
+CONTATTO_SIGNAL_URL = "https://signal.me/#eu/Zqcxm0Jfr8OiY0mZVtA7BxNpcYEQvoInjSRMCARGF2xlWavhNINJ6rpzInZ541rs"
+GRUPPO_SIGNAL_URL = "https://signal.group/#CjQKID9tL8cCImVFQwpUkUl0dip-eoy5J_dng0hNceDAI0uGEhBI24Ucgn3aGq9JhPfXyaB_"
 
 # =========================================================
 # 🏠 MENU PRINCIPALE
