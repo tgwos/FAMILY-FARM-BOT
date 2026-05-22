@@ -26,10 +26,10 @@ TOKEN = os.getenv("BOT_TOKEN")
 LOGO_URL = "https://tgwos.github.io/FAMILY-FARM/LOGOFF.jpg"
 CATALOG_URL = "https://tgwos.github.io/FAMILY-FARM/"
 
-TELEGRAM_CONTACT_URL = "https://t.me/JJ_OFFICIAL999"
-TELEGRAM_GROUP_URL = "https://t.me/+398_0ofVUk42N2E0"
-SIGNAL_URL = "https://signal.me/#eu/bpFlSUFSW3Sq1RnylvtoF15ilKbwP9LSU6mwwCgjwrQ-R2RWcSNKWbMcnhvy_2RQ"
-INSTAGRAM_URL = "https://www.instagram.com/Los_sicarios999/"
+TELEGRAM_CONTACT_URL = "https://t.me/familyfarm01"
+TELEGRAM_GROUP_URL = "https://t.me/+Z8V2ja92liczMDVk"
+
+
 
 # =========================================================
 # 🏠 MENU PRINCIPALE
@@ -96,17 +96,10 @@ def contacts_keyboard():
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     caption = (
-        "🏪 LOS-SICARIOS — OFFICIAL BOT\n"
+        "🏪 FAMILY FARM — OFFICIAL BOT\n"
         "━━━━━━━━━━━━━━\n\n"
         "Benvenuto nel menu ufficiale.\n"
         "Scegli una sezione qui sotto:\n\n"
-        "🛒 Catalogo\n"
-        "📞 Contatti ufficiali\n"
-        "👥 Community Telegram\n\n"
-        "━━━━━━━━━━━━━━\n"
-        "✅ Supporto rapido\n"
-        "🔒 Solo canali ufficiali\n"
-        "📦 Catalogo sempre aggiornato"
     )
 
     try:
@@ -175,7 +168,7 @@ async def buttons(update: Update, context: ContextTypes.DEFAULT_TYPE):
     elif query.data == "back":
 
         caption = (
-            "🏪 LOS-SICARIOS — OFFICIAL BOT\n"
+            "🏪 FAMILY FARM — OFFICIAL BOT\n"
             "━━━━━━━━━━━━━━\n\n"
             "Benvenuto nel menu ufficiale.\n"
             "Scegli una sezione qui sotto:\n\n"
